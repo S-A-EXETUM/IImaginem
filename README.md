@@ -17,3 +17,7 @@
 ## Front-End
 
 - Crear proyecto Angular
+
+## Otros
+
+- Subir a Vercel el Back-End
