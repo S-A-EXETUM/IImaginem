@@ -26,7 +26,9 @@ const getUserPosts = async (req, res)=>{
 
 //Post User
 const postUser = async (req, res)=>{
-    
+    const user= new User(req.body)
+    const savedUser= await user.save()
+    res.json(savedUser)
     
 
 }
