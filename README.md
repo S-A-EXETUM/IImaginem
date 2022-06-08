@@ -12,6 +12,8 @@
 
 - CRUD de Usuarios :white_check_mark:
 
+- CRUD de Publicaciones
+
 - Agregar foto de perfil a usuario
 
 - ...
@@ -21,7 +23,6 @@
 - Crear proyecto Angular :white_check_mark:
 
 - Crear vista login
-- Crear proyecto Angular
 
 ## Otros
 
