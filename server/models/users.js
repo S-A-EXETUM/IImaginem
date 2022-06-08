@@ -27,17 +27,21 @@ const userSchema = Schema({
         default:true,
     },
     followers:{
-        type:Number,
-        default: 0
+        //Array = [ {_id}, {_id} ]
+        type:Array
     },
     followed:{
-        type:Number,
-        default: 0
+        //Array = [ {_id}, {_id} ]
+        type:Array
     },
     posts:{
         type: Schema.Types.ObjectId,
         ref: 'Post'
-    }
+    },
+    // Cambiar el tipo
+    profileImage:{
+        type: String
+    },
     //token:{
       //  type:String,
     //}
@@ -63,6 +67,15 @@ userSchema.methods.checkPassword = async function (formPassword){
     return await bcrypt.compare(formPassword, this.password);
 }
 
+//Elimina atributos innecesarios al devolver de la BD
+userSchema.set('toJSON', {
+    transform: (document, returnedObject) => {
+        returnedObject.id = returnedObject._id
+        delete returnedObject._id
+        delete returnedObject.__v
+        delete returnedObject.password
+    }
+})
 
 const User = model('User', userSchema)
 
