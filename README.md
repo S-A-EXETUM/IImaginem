@@ -21,3 +21,8 @@
 - Crear proyecto Angular :white_check_mark:
 
 - Crear vista login
+- Crear proyecto Angular
+
+## Otros
+
+- Subir a Vercel el Back-End
